@@ -87,7 +87,7 @@
         class="ml-0 pl-4"
       >
         <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-        <span class="hidden-sm-and-down">Google Contacts</span>
+        <span class="hidden-sm-and-down">きよきよ</span>
       </v-toolbar-title>
       <v-text-field
         flat
@@ -131,30 +131,30 @@
           <v-tooltip right>
             <template v-slot:activator="{ on }">
               <v-btn
-                :href="source"
                 icon
                 large
+                href="https://github.com/kiyokiyo-kzsby"
                 target="_blank"
                 v-on="on"
               >
-                <v-icon large>mdi-code-tags</v-icon>
+                <v-icon large>mdi-github-circle</v-icon>
               </v-btn>
             </template>
-            <span>Source</span>
+            <span>GitHub</span>
           </v-tooltip>
           <v-tooltip right>
             <template v-slot:activator="{ on }">
               <v-btn
                 icon
                 large
-                href="https://codepen.io/johnjleider/pen/MNYLdL"
+                href="https://twitter.com/kiyokiyo_kzsby"
                 target="_blank"
                 v-on="on"
               >
-                <v-icon large>mdi-codepen</v-icon>
+                <v-icon large>mdi-twitter</v-icon>
               </v-btn>
             </template>
-            <span>Codepen</span>
+            <span>Twitter</span>
           </v-tooltip>
         </v-row>
       </v-container>
@@ -254,9 +254,6 @@
 
 <script>
   export default {
-    props: {
-      source: String,
-    },
     data: () => ({
       dialog: false,
       drawer: null,
