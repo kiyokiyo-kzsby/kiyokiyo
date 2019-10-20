@@ -87,7 +87,7 @@
         class="ml-0 pl-4"
       >
         <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-        <span class="hidden-sm-and-down">きよきよ</span>
+        <span class="hidden-sm-and-down">きよきよポータル</span>
       </v-toolbar-title>
       <v-text-field
         flat
@@ -119,6 +119,7 @@
           </v-img></v-avatar>
       </v-btn>
     </v-app-bar>
+
     <v-content>
       <v-container
         class="fill-height"
@@ -133,11 +134,45 @@
               <v-btn
                 icon
                 large
+                href="https://kiyokiyo-kzsby.hatenablog.com/"
+                target="_blank"
+                v-on="on"
+              >
+                <v-avatar
+                  size="32px"
+                  item
+                ><v-img src="@/assets/hatenablog-icon.png"></v-img></v-avatar>
+              </v-btn>
+            </template>
+            <span>Hatena Blog</span>
+          </v-tooltip>
+          <v-tooltip right>
+            <template v-slot:activator="{ on }">
+              <v-btn
+                icon
+                large
+                href="https://qiita.com/kiyokiyo_kzsby"
+                target="_blank"
+                v-on="on"
+              >
+                <v-avatar
+                  size="32px"
+                  item
+                ><v-img src="@/assets/qiita-favicon.png"></v-img></v-avatar>
+              </v-btn>
+            </template>
+            <span>Qiita</span>
+          </v-tooltip>
+          <v-tooltip right>
+            <template v-slot:activator="{ on }">
+              <v-btn
+                icon
+                large
                 href="https://github.com/kiyokiyo-kzsby"
                 target="_blank"
                 v-on="on"
               >
-                <v-icon large>mdi-github-circle</v-icon>
+                <v-icon large color="black">mdi-github-circle</v-icon>
               </v-btn>
             </template>
             <span>GitHub</span>
@@ -151,7 +186,7 @@
                 target="_blank"
                 v-on="on"
               >
-                <v-icon large>mdi-twitter</v-icon>
+                <v-icon large color="blue">mdi-twitter</v-icon>
               </v-btn>
             </template>
             <span>Twitter</span>
@@ -159,6 +194,7 @@
         </v-row>
       </v-container>
     </v-content>
+
     <v-btn
       bottom
       color="pink"
@@ -170,6 +206,7 @@
     >
       <v-icon>mdi-plus</v-icon>
     </v-btn>
+
     <v-dialog
       v-model="dialog"
       width="800px"
@@ -249,6 +286,7 @@
         </v-card-actions>
       </v-card>
     </v-dialog>
+
   </v-app>
 </template>
 
