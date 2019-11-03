@@ -1,6 +1,6 @@
 <template>
   <v-app id="inspire">
-    <v-navigation-drawer
+    <!-- <v-navigation-drawer
       v-model="drawer"
       :clipped="$vuetify.breakpoint.lgAndUp"
       app
@@ -74,7 +74,7 @@
           </v-list-item>
         </template>
       </v-list>
-    </v-navigation-drawer>
+    </v-navigation-drawer> -->
 
     <v-app-bar
       :clipped-left="$vuetify.breakpoint.lgAndUp"
@@ -86,10 +86,10 @@
         style="width: 300px"
         class="ml-0 pl-4"
       >
-        <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-        <span class="hidden-sm-and-down">きよきよポータル</span>
+        <!-- <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon> -->
+        <span>きよきよポータル</span>
       </v-toolbar-title>
-      <v-text-field
+      <!-- <v-text-field
         flat
         solo-inverted
         hide-details
@@ -117,85 +117,157 @@
             alt="Vuetify"
           >
           </v-img></v-avatar>
-      </v-btn>
+      </v-btn> -->
     </v-app-bar>
 
     <v-content>
       <v-container
-        class="fill-height"
         fluid
       >
         <v-row
           align="center"
           justify="center"
         >
-          <v-tooltip right>
-            <template v-slot:activator="{ on }">
-              <v-btn
-                icon
-                large
-                href="https://kiyokiyo-kzsby.hatenablog.com/"
-                target="_blank"
-                v-on="on"
-              >
-                <v-avatar
-                  size="32px"
-                  item
-                ><v-img src="@/assets/hatenablog-icon.png"></v-img></v-avatar>
-              </v-btn>
-            </template>
-            <span>Hatena Blog</span>
-          </v-tooltip>
-          <v-tooltip right>
-            <template v-slot:activator="{ on }">
-              <v-btn
-                icon
-                large
-                href="https://qiita.com/kiyokiyo_kzsby"
-                target="_blank"
-                v-on="on"
-              >
-                <v-avatar
-                  size="32px"
-                  item
-                ><v-img src="@/assets/qiita-favicon.png"></v-img></v-avatar>
-              </v-btn>
-            </template>
-            <span>Qiita</span>
-          </v-tooltip>
-          <v-tooltip right>
-            <template v-slot:activator="{ on }">
-              <v-btn
-                icon
-                large
-                href="https://github.com/kiyokiyo-kzsby"
-                target="_blank"
-                v-on="on"
-              >
-                <v-icon large color="black">mdi-github-circle</v-icon>
-              </v-btn>
-            </template>
-            <span>GitHub</span>
-          </v-tooltip>
-          <v-tooltip right>
-            <template v-slot:activator="{ on }">
-              <v-btn
-                icon
-                large
-                href="https://twitter.com/kiyokiyo_kzsby"
-                target="_blank"
-                v-on="on"
-              >
-                <v-icon large color="blue">mdi-twitter</v-icon>
-              </v-btn>
-            </template>
-            <span>Twitter</span>
-          </v-tooltip>
+          <v-col cols="3">
+            <v-img src="@/assets/kiyokiyo.jpg" max-width="120px"></v-img>
+          </v-col>
+          <v-col cols="6">
+            <h1>きよきよ</h1>
+            <p>Software Engineer / IT Consultant</p>
+            <div>
+              <v-tooltip right>
+                <template v-slot:activator="{ on }">
+                  <v-btn
+                    icon
+                    large
+                    href="https://kiyokiyo-kzsby.hatenablog.com/"
+                    target="_blank"
+                    v-on="on"
+                  >
+                    <v-avatar
+                      size="32px"
+                      item
+                    ><v-img src="@/assets/hatenablog-icon.png"></v-img></v-avatar>
+                  </v-btn>
+                </template>
+                <span>Hatena Blog</span>
+              </v-tooltip>
+              <v-tooltip right>
+                <template v-slot:activator="{ on }">
+                  <v-btn
+                    icon
+                    large
+                    href="https://qiita.com/kiyokiyo_kzsby"
+                    target="_blank"
+                    v-on="on"
+                  >
+                    <v-avatar
+                      size="32px"
+                      item
+                    ><v-img src="@/assets/qiita-favicon.png"></v-img></v-avatar>
+                  </v-btn>
+                </template>
+                <span>Qiita</span>
+              </v-tooltip>
+              <v-tooltip right>
+                <template v-slot:activator="{ on }">
+                  <v-btn
+                    icon
+                    large
+                    href="https://github.com/kiyokiyo-kzsby"
+                    target="_blank"
+                    v-on="on"
+                  >
+                    <v-icon large color="black">mdi-github-circle</v-icon>
+                  </v-btn>
+                </template>
+                <span>GitHub</span>
+              </v-tooltip>
+              <v-tooltip right>
+                <template v-slot:activator="{ on }">
+                  <v-btn
+                    icon
+                    large
+                    href="https://twitter.com/kiyokiyo_kzsby"
+                    target="_blank"
+                    v-on="on"
+                  >
+                    <v-icon large color="blue">mdi-twitter</v-icon>
+                  </v-btn>
+                </template>
+                <span>Twitter</span>
+              </v-tooltip>
+            </div>
+          </v-col>
+        </v-row>
+        <v-row
+          align="center"
+          justify="center"
+        >
+          <v-col cols="9">
+            <div>
+              <h3>完全に理解した</h3>
+              <hr>
+              <v-list-item two-line>
+                <v-list-item-content>
+                  <v-list-item-title>Vue.js</v-list-item-title>
+                  <v-list-item-subtitle>このページはVue.jsで作られています。</v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+              <v-list-item two-line>
+                <v-list-item-content>
+                  <v-list-item-title>AWS</v-list-item-title>
+                  <v-list-item-subtitle>Solution Architect Associate 取得しました。</v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+              <v-list-item two-line>
+                <v-list-item-content>
+                  <v-list-item-title>Docker</v-list-item-title>
+                  <v-list-item-subtitle>Webサーバ/Appサーバ/DBサーバを別コンテナで立てて繋げるお遊びをしてました。</v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+            </div>
+            <div>
+              <h3>なにも分からない</h3>
+              <hr>
+              <v-list-item two-line>
+                <v-list-item-content>
+                  <v-list-item-title>AtCoder</v-list-item-title>
+                  <v-list-item-subtitle>水色です。</v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+            </div>
+            <div>
+              <h3>チョットデキル</h3>
+              <hr>
+              <v-list-item>
+                <v-list-item-content>
+                  <v-list-item-title>Nothing</v-list-item-title>
+                </v-list-item-content>
+              </v-list-item>
+            </div>
+            <div>
+              <h3>興味あり</h3>
+              <hr>
+              <v-list-item two-line>
+                <v-list-item-content>
+                  <v-list-item-title>Kaggle</v-list-item-title>
+                  <v-list-item-subtitle>GrandMasterになりたい。</v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+              <v-list-item two-line>
+                <v-list-item-content>
+                  <v-list-item-title>CircleCI</v-list-item-title>
+                  <v-list-item-subtitle>CI/CD周りできるようになったらかっこよくない？</v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+            </div>
+          </v-col>
         </v-row>
       </v-container>
     </v-content>
 
-    <v-btn
+    <!-- <v-btn
       bottom
       color="pink"
       dark
@@ -285,7 +357,7 @@
           >Save</v-btn>
         </v-card-actions>
       </v-card>
-    </v-dialog>
+    </v-dialog> -->
 
   </v-app>
 </template>
