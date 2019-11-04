@@ -128,10 +128,10 @@
           align="center"
           justify="center"
         >
-          <v-col cols="3">
+          <v-col cols="2">
             <v-img src="@/assets/kiyokiyo.jpg" max-width="120px"></v-img>
           </v-col>
-          <v-col cols="6">
+          <v-col cols="8">
             <h1>きよきよ</h1>
             <p>Software Engineer / IT Consultant</p>
             <div>
@@ -192,7 +192,7 @@
                     target="_blank"
                     v-on="on"
                   >
-                    <v-icon large color="blue">mdi-twitter</v-icon>
+                    <v-icon color="blue" large>mdi-twitter</v-icon>
                   </v-btn>
                 </template>
                 <span>Twitter</span>
@@ -204,7 +204,7 @@
           align="center"
           justify="center"
         >
-          <v-col cols="9">
+          <v-col cols="10">
             <div>
               <h3>完全に理解した</h3>
               <hr>
