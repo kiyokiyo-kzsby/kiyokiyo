@@ -125,13 +125,13 @@
         fluid
       >
         <v-row
-          align="center"
+          align="start"
           justify="center"
         >
-          <v-col cols="2">
+          <v-col cols="5" sm="2">
             <v-img src="@/assets/kiyokiyo.jpg" max-width="120px"></v-img>
           </v-col>
-          <v-col cols="8">
+          <v-col cols="7" sm="8" pa-xs-2 pa-sm-3>
             <h1>きよきよ</h1>
             <p>Software Engineer / IT Consultant</p>
             <div>
@@ -204,23 +204,23 @@
           align="center"
           justify="center"
         >
-          <v-col cols="10">
+          <v-col cols="12" sm="10">
             <div>
               <h3>完全に理解した</h3>
               <hr>
-              <v-list-item two-line>
+              <v-list-item three-line>
                 <v-list-item-content>
                   <v-list-item-title>Vue.js</v-list-item-title>
                   <v-list-item-subtitle>このページはVue.jsで作られています。</v-list-item-subtitle>
                 </v-list-item-content>
               </v-list-item>
-              <v-list-item two-line>
+              <v-list-item three-line>
                 <v-list-item-content>
                   <v-list-item-title>AWS</v-list-item-title>
                   <v-list-item-subtitle>Solution Architect Associate 取得しました。</v-list-item-subtitle>
                 </v-list-item-content>
               </v-list-item>
-              <v-list-item two-line>
+              <v-list-item three-line>
                 <v-list-item-content>
                   <v-list-item-title>Docker</v-list-item-title>
                   <v-list-item-subtitle>Webサーバ/Appサーバ/DBサーバを別コンテナで立てて繋げるお遊びをしてました。</v-list-item-subtitle>
@@ -230,7 +230,7 @@
             <div>
               <h3>なにも分からない</h3>
               <hr>
-              <v-list-item two-line>
+              <v-list-item three-line>
                 <v-list-item-content>
                   <v-list-item-title>AtCoder</v-list-item-title>
                   <v-list-item-subtitle>水色です。</v-list-item-subtitle>
@@ -249,13 +249,13 @@
             <div>
               <h3>興味あり</h3>
               <hr>
-              <v-list-item two-line>
+              <v-list-item three-line>
                 <v-list-item-content>
                   <v-list-item-title>Kaggle</v-list-item-title>
                   <v-list-item-subtitle>GrandMasterになりたい。</v-list-item-subtitle>
                 </v-list-item-content>
               </v-list-item>
-              <v-list-item two-line>
+              <v-list-item three-line>
                 <v-list-item-content>
                   <v-list-item-title>CircleCI</v-list-item-title>
                   <v-list-item-subtitle>CI/CD周りできるようになったらかっこよくない？</v-list-item-subtitle>
