@@ -205,9 +205,10 @@
           justify="center"
         >
           <v-col cols="12" sm="10">
-            <div>
-              <h3>完全に理解した</h3>
-              <hr>
+            <v-list-group>
+              <template v-slot:activator>
+                <v-list-item-title><span class="skill-category">完全に理解した</span></v-list-item-title>
+              </template>
               <v-list-item three-line>
                 <v-list-item-content>
                   <v-list-item-title>Vue.js</v-list-item-title>
@@ -226,29 +227,32 @@
                   <v-list-item-subtitle>Webサーバ/Appサーバ/DBサーバを別コンテナで立てて繋げるお遊びをしてました。</v-list-item-subtitle>
                 </v-list-item-content>
               </v-list-item>
-            </div>
-            <div>
-              <h3>なにも分からない</h3>
-              <hr>
+            </v-list-group>
+            <v-list-group>
+              <template v-slot:activator>
+                <v-list-item-title><span class="skill-category">なにも分からない</span></v-list-item-title>
+              </template>
               <v-list-item three-line>
                 <v-list-item-content>
                   <v-list-item-title>AtCoder</v-list-item-title>
                   <v-list-item-subtitle>水色です。</v-list-item-subtitle>
                 </v-list-item-content>
               </v-list-item>
-            </div>
-            <div>
-              <h3>チョットデキル</h3>
-              <hr>
+            </v-list-group>
+            <v-list-group>
+              <template v-slot:activator>
+                <v-list-item-title><span class="skill-category">チョットデキル</span></v-list-item-title>
+              </template>
               <v-list-item>
                 <v-list-item-content>
                   <v-list-item-title>Nothing</v-list-item-title>
                 </v-list-item-content>
               </v-list-item>
-            </div>
-            <div>
-              <h3>興味あり</h3>
-              <hr>
+            </v-list-group>
+            <v-list-group>
+              <template v-slot:activator>
+                <v-list-item-title><span class="skill-category">やってみたい</span></v-list-item-title>
+              </template>
               <v-list-item three-line>
                 <v-list-item-content>
                   <v-list-item-title>Kaggle</v-list-item-title>
@@ -261,7 +265,7 @@
                   <v-list-item-subtitle>CI/CD周りできるようになったらかっこよくない？</v-list-item-subtitle>
                 </v-list-item-content>
               </v-list-item>
-            </div>
+            </v-list-group>
           </v-col>
         </v-row>
       </v-container>
@@ -402,3 +406,10 @@
     }),
   }
 </script>
+
+<style scoped>
+.skill-category{
+  font-size: 18px;
+  font-weight: bold;
+}
+</style>
