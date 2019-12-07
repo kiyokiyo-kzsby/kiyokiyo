@@ -101,6 +101,35 @@
           <v-col cols="12" sm="10">
             <v-list-group>
               <template v-slot:activator>
+                <v-list-item-title><span class="skill-category">触ったことある</span></v-list-item-title>
+              </template>
+              <v-list-item three-line>
+                <v-list-item-content>
+                  <v-list-item-title>AWS全般</v-list-item-title>
+                  <v-list-item-subtitle>Solution Architect Associate 取得しました。</v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+              <v-list-item three-line>
+                <v-list-item-content>
+                  <v-list-item-title>ElasticSearch</v-list-item-title>
+                  <v-list-item-subtitle>内部構造や形態素解析器の挙動など、少しだけ理解しています。</v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+              <v-list-item three-line>
+                <v-list-item-content>
+                  <v-list-item-title>heroku</v-list-item-title>
+                  <v-list-item-subtitle>アプリのデプロイ先として一時期利用していました。</v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+              <v-list-item three-line>
+                <v-list-item-content>
+                  <v-list-item-title>firebase</v-list-item-title>
+                  <v-list-item-subtitle>アプリのデプロイ先として一時期利用していました。firestoreも使用していました。</v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+            </v-list-group>
+            <v-list-group>
+              <template v-slot:activator>
                 <v-list-item-title><span class="skill-category">完全に理解した</span></v-list-item-title>
               </template>
               <v-list-item three-line>
@@ -111,14 +140,32 @@
               </v-list-item>
               <v-list-item three-line>
                 <v-list-item-content>
-                  <v-list-item-title>AWS</v-list-item-title>
-                  <v-list-item-subtitle>Solution Architect Associate 取得しました。</v-list-item-subtitle>
+                  <v-list-item-title>flask</v-list-item-title>
+                  <v-list-item-subtitle>flaskでブログアプリ作成しました。CRUDとログイン処理は一通り書けます。</v-list-item-subtitle>
                 </v-list-item-content>
               </v-list-item>
               <v-list-item three-line>
                 <v-list-item-content>
                   <v-list-item-title>Docker</v-list-item-title>
                   <v-list-item-subtitle>Webサーバ/Appサーバ/DBサーバを別コンテナで立てて繋げるお遊びをしてました。</v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+              <v-list-item three-line>
+                <v-list-item-content>
+                  <v-list-item-title>Amazon S3</v-list-item-title>
+                  <v-list-item-subtitle>このWebページのデプロイ先としてS3を使用しています。</v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+              <v-list-item three-line>
+                <v-list-item-content>
+                  <v-list-item-title>chrome拡張</v-list-item-title>
+                  <v-list-item-subtitle>社内業務を効率化するchrome拡張作りました。</v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+              <v-list-item three-line>
+                <v-list-item-content>
+                  <v-list-item-title>selenium</v-list-item-title>
+                  <v-list-item-subtitle>社内業務を自動化するアプリケーション作りました。</v-list-item-subtitle>
                 </v-list-item-content>
               </v-list-item>
             </v-list-group>
