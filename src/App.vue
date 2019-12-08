@@ -15,13 +15,8 @@
     </v-app-bar>
 
     <v-content>
-      <v-container
-        fluid
-      >
-        <v-row
-          align="start"
-          justify="center"
-        >
+      <v-container fluid>
+        <v-row align="start" justify="center">
           <v-col cols="5" sm="2">
             <v-img src="@/assets/kiyokiyo.jpg" max-width="120px"></v-img>
           </v-col>
@@ -29,75 +24,21 @@
             <h1>きよきよ</h1>
             <p>Software Engineer / IT Consultant</p>
             <div>
-              <v-tooltip right>
-                <template v-slot:activator="{ on }">
-                  <v-btn
-                    icon
-                    large
-                    href="https://kiyokiyo-kzsby.hatenablog.com/"
-                    target="_blank"
-                    v-on="on"
-                  >
-                    <v-avatar
-                      size="32px"
-                      item
-                    ><v-img src="@/assets/hatenablog-icon.png"></v-img></v-avatar>
+              <v-tooltip right v-for="(icon,index) in icons" :key="index">
+                <template v-slot:activator="{on}">
+                  <v-btn :href="icon.href" icon large target="_blank" v-on="on">
+                    <v-avatar v-if="icon.img" size="32px" item>
+                      <v-img :src="icon.img"></v-img>
+                    </v-avatar>
+                    <v-icon v-else-if="icon.icon" :color="icon.icon.color" large>{{icon.icon.name}}</v-icon>
                   </v-btn>
                 </template>
-                <span>Hatena Blog</span>
-              </v-tooltip>
-              <v-tooltip right>
-                <template v-slot:activator="{ on }">
-                  <v-btn
-                    icon
-                    large
-                    href="https://qiita.com/kiyokiyo_kzsby"
-                    target="_blank"
-                    v-on="on"
-                  >
-                    <v-avatar
-                      size="32px"
-                      item
-                    ><v-img src="@/assets/qiita-favicon.png"></v-img></v-avatar>
-                  </v-btn>
-                </template>
-                <span>Qiita</span>
-              </v-tooltip>
-              <v-tooltip right>
-                <template v-slot:activator="{ on }">
-                  <v-btn
-                    icon
-                    large
-                    href="https://github.com/kiyokiyo-kzsby"
-                    target="_blank"
-                    v-on="on"
-                  >
-                    <v-icon large color="black">mdi-github-circle</v-icon>
-                  </v-btn>
-                </template>
-                <span>GitHub</span>
-              </v-tooltip>
-              <v-tooltip right>
-                <template v-slot:activator="{ on }">
-                  <v-btn
-                    icon
-                    large
-                    href="https://twitter.com/kiyokiyo_kzsby"
-                    target="_blank"
-                    v-on="on"
-                  >
-                    <v-icon color="blue" large>mdi-twitter</v-icon>
-                  </v-btn>
-                </template>
-                <span>Twitter</span>
+                <span>{{icon.title}}</span>
               </v-tooltip>
             </div>
           </v-col>
         </v-row>
-        <v-row
-          align="center"
-          justify="center"
-        >
+        <v-row align="center" justify="center">
           <v-col cols="12" sm="10">
             <v-list-group v-for="(skill,index) in skills" :key="index">
               <template v-slot:activator>
@@ -121,6 +62,34 @@
 <script>
   export default {
     data: () => ({
+      icons: [
+        {
+          title: "Hatena Blog",
+          href: "https://kiyokiyo-kzsby.hatenablog.com/",
+          img: require("@/assets/hatenablog-icon.png")
+        },
+        {
+          title: "Qiita",
+          href: "https://qiita.com/kiyokiyo_kzsby",
+          img: require("@/assets/qiita-favicon.png")
+        },
+        {
+          title: "GitHub",
+          href: "https://github.com/kiyokiyo-kzsby",
+          icon: {
+            name: "mdi-github-circle",
+            color: "black"
+          }
+        },
+        {
+          title: "Twitter",
+          href: "https://twitter.com/kiyokiyo_kzsby",
+          icon: {
+            name: "mdi-twitter",
+            color: "blue"
+          }
+        }
+      ],
       skills: [
         {
           caption: "触ったことある",
