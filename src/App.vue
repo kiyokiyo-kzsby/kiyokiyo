@@ -99,111 +99,14 @@
           justify="center"
         >
           <v-col cols="12" sm="10">
-            <v-list-group>
+            <v-list-group v-for="(skill,index) in skills" :key="index">
               <template v-slot:activator>
-                <v-list-item-title><span class="skill-category">触ったことある</span></v-list-item-title>
+                <v-list-item-title><span class="skill-caption">{{skill.caption}}</span></v-list-item-title>
               </template>
-              <v-list-item three-line>
+              <v-list-item three-line v-for="(content,index) in skill.contents" :key="index">
                 <v-list-item-content>
-                  <v-list-item-title>AWS全般</v-list-item-title>
-                  <v-list-item-subtitle>Solution Architect Associate 取得しました。</v-list-item-subtitle>
-                </v-list-item-content>
-              </v-list-item>
-              <v-list-item three-line>
-                <v-list-item-content>
-                  <v-list-item-title>ElasticSearch</v-list-item-title>
-                  <v-list-item-subtitle>内部構造や形態素解析器の挙動など、少しだけ理解しています。</v-list-item-subtitle>
-                </v-list-item-content>
-              </v-list-item>
-              <v-list-item three-line>
-                <v-list-item-content>
-                  <v-list-item-title>heroku</v-list-item-title>
-                  <v-list-item-subtitle>アプリのデプロイ先として一時期利用していました。</v-list-item-subtitle>
-                </v-list-item-content>
-              </v-list-item>
-              <v-list-item three-line>
-                <v-list-item-content>
-                  <v-list-item-title>firebase</v-list-item-title>
-                  <v-list-item-subtitle>アプリのデプロイ先として一時期利用していました。firestoreも使用していました。</v-list-item-subtitle>
-                </v-list-item-content>
-              </v-list-item>
-            </v-list-group>
-            <v-list-group>
-              <template v-slot:activator>
-                <v-list-item-title><span class="skill-category">完全に理解した</span></v-list-item-title>
-              </template>
-              <v-list-item three-line>
-                <v-list-item-content>
-                  <v-list-item-title>Vue.js</v-list-item-title>
-                  <v-list-item-subtitle>このページはVue.jsで作られています。</v-list-item-subtitle>
-                </v-list-item-content>
-              </v-list-item>
-              <v-list-item three-line>
-                <v-list-item-content>
-                  <v-list-item-title>flask</v-list-item-title>
-                  <v-list-item-subtitle>flaskでブログアプリ作成しました。CRUDとログイン処理は一通り書けます。</v-list-item-subtitle>
-                </v-list-item-content>
-              </v-list-item>
-              <v-list-item three-line>
-                <v-list-item-content>
-                  <v-list-item-title>Docker</v-list-item-title>
-                  <v-list-item-subtitle>Webサーバ/Appサーバ/DBサーバを別コンテナで立てて繋げるお遊びをしてました。</v-list-item-subtitle>
-                </v-list-item-content>
-              </v-list-item>
-              <v-list-item three-line>
-                <v-list-item-content>
-                  <v-list-item-title>Amazon S3</v-list-item-title>
-                  <v-list-item-subtitle>このWebページのデプロイ先としてS3を使用しています。</v-list-item-subtitle>
-                </v-list-item-content>
-              </v-list-item>
-              <v-list-item three-line>
-                <v-list-item-content>
-                  <v-list-item-title>chrome拡張</v-list-item-title>
-                  <v-list-item-subtitle>社内業務を効率化するchrome拡張作りました。</v-list-item-subtitle>
-                </v-list-item-content>
-              </v-list-item>
-              <v-list-item three-line>
-                <v-list-item-content>
-                  <v-list-item-title>selenium</v-list-item-title>
-                  <v-list-item-subtitle>社内業務を自動化するアプリケーション作りました。</v-list-item-subtitle>
-                </v-list-item-content>
-              </v-list-item>
-            </v-list-group>
-            <v-list-group>
-              <template v-slot:activator>
-                <v-list-item-title><span class="skill-category">なにも分からない</span></v-list-item-title>
-              </template>
-              <v-list-item three-line>
-                <v-list-item-content>
-                  <v-list-item-title>AtCoder</v-list-item-title>
-                  <v-list-item-subtitle>水色です。</v-list-item-subtitle>
-                </v-list-item-content>
-              </v-list-item>
-            </v-list-group>
-            <v-list-group>
-              <template v-slot:activator>
-                <v-list-item-title><span class="skill-category">チョットデキル</span></v-list-item-title>
-              </template>
-              <v-list-item>
-                <v-list-item-content>
-                  <v-list-item-title>Nothing</v-list-item-title>
-                </v-list-item-content>
-              </v-list-item>
-            </v-list-group>
-            <v-list-group>
-              <template v-slot:activator>
-                <v-list-item-title><span class="skill-category">やってみたい</span></v-list-item-title>
-              </template>
-              <v-list-item three-line>
-                <v-list-item-content>
-                  <v-list-item-title>Kaggle</v-list-item-title>
-                  <v-list-item-subtitle>GrandMasterになりたい。</v-list-item-subtitle>
-                </v-list-item-content>
-              </v-list-item>
-              <v-list-item three-line>
-                <v-list-item-content>
-                  <v-list-item-title>CircleCI</v-list-item-title>
-                  <v-list-item-subtitle>CI/CD周りできるようになったらかっこよくない？</v-list-item-subtitle>
+                  <v-list-item-title>{{content.title}}</v-list-item-title>
+                  <v-list-item-subtitle>{{content.description}}</v-list-item-subtitle>
                 </v-list-item-content>
               </v-list-item>
             </v-list-group>
@@ -218,46 +121,90 @@
 <script>
   export default {
     data: () => ({
-      dialog: false,
-      drawer: null,
-      items: [
-        { icon: 'contacts', text: 'Contacts' },
-        { icon: 'history', text: 'Frequently contacted' },
-        { icon: 'content_copy', text: 'Duplicates' },
+      skills: [
         {
-          icon: 'keyboard_arrow_up',
-          'icon-alt': 'keyboard_arrow_down',
-          text: 'Labels',
-          model: true,
-          children: [
-            { icon: 'add', text: 'Create label' },
-          ],
+          caption: "触ったことある",
+          contents: [
+            {
+              title: "AWS全般",
+              description: "Solution Architect Associate 取得しました。"
+            },
+            {
+              title: "ElasticSearch",
+              description: "内部構造や形態素解析器の挙動など、少しだけ理解しています。"
+            },
+            {
+              title: "heroku",
+              description: "アプリのデプロイ先として一時期利用していました。"
+            },
+            {
+              title: "firebase",
+              description: "アプリのデプロイ先として一時期利用していました。firestoreも使用していました。"
+            }
+          ]
         },
         {
-          icon: 'keyboard_arrow_up',
-          'icon-alt': 'keyboard_arrow_down',
-          text: 'More',
-          model: false,
-          children: [
-            { text: 'Import' },
-            { text: 'Export' },
-            { text: 'Print' },
-            { text: 'Undo changes' },
-            { text: 'Other contacts' },
-          ],
+          caption: "完全に理解した",
+          contents: [
+            {
+              title: "Vue.js",
+              description: "このページはVue.jsで作られています。"
+            },
+            {
+              title: "flask",
+              description: "flaskでブログアプリ作成しました。CRUDとログイン処理は一通り書けます。"
+            },
+            {
+              title: "Docker",
+              description: "Webサーバ/Appサーバ/DBサーバを別コンテナで立てて繋げるお遊びをしてました。"
+            },
+            {
+              title: "Amazon S3",
+              description: "このWebページのデプロイ先としてS3を使用しています。"
+            },
+            {
+              title: "chrome拡張",
+              description: "社内業務を効率化するchrome拡張作りました。"
+            },
+            {
+              title: "selenium",
+              description: "社内業務を自動化するアプリケーション作りました。"
+            }
+          ]
         },
-        { icon: 'settings', text: 'Settings' },
-        { icon: 'chat_bubble', text: 'Send feedback' },
-        { icon: 'help', text: 'Help' },
-        { icon: 'phonelink', text: 'App downloads' },
-        { icon: 'keyboard', text: 'Go to the old version' },
-      ],
+        {
+          caption: "なにも分からない",
+          contents: [
+            {
+              title: "AtCoder",
+              description: "水色です。"
+            }
+          ]
+        },
+        {
+          caption: "チョットデキル",
+          contents: []
+        },
+        {
+          caption: "やってみたい",
+          contents: [
+            {
+              title: "Kaggle",
+              description: "GrandMasterになりたい。"
+            },
+            {
+              title: "CircleCI",
+              description: "CI/CD周りできるようになったらかっこよくない？"
+            }
+          ]
+        }
+      ]
     }),
   }
 </script>
 
 <style scoped>
-.skill-category{
+.skill-caption{
   font-size: 18px;
   font-weight: bold;
 }
